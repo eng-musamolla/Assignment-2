@@ -9,17 +9,47 @@ a{
 
 
 .container{
-    width: 1170px;
+    width: 1024px;
     margin: 0 auto;
 }
-.container2{
-    width: 1080px;
-    margin: 0 auto;
-}
+
 
 /*============================================
                 nav part start
 ==============================================*/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 766px) {
+    nav .menu {
+        justify-content: center !important;
+    }
+    nav .menu .logo p{
+        font-size: 50px;
+    }
+    nav .nav_item{
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    nav .menu {
+        justify-content: center !important;
+    }
+    nav .menu .logo p{
+        font-size: 50px;
+    }
+    nav .nav_item{
+        visibility: hidden;
+        position: absolute;
+    }
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
 nav .menu{
     display: flex;
     align-items: center; 
@@ -76,14 +106,50 @@ nav .icon i:hover{
 }
 
 /*============================================
-                nav part end
+nav part end
 ==============================================*/
 /*============================================
-                Banar part Start
+Banar part Start
 ==============================================*/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 766px) {
+    .banar {
+        display: inline-flex;
+        gap: 100px;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 20px;
+        flex-direction: column-reverse;
+    }
+    #banar .text_part{
+        text-align: center;
+        align-items: baseline;
+    }
+    #banar .text_part h3{
+        font-size: 85px;
+    }
+    #banar .text_part p{
+        font-size: 40px;
+        margin: 50px 0;
+    }
+    #banar .text_part a{
+        font-size: 50px;
+        padding: 20px 58px;
+        border-radius: 103px;
+    }
+    
+    .image_part img {
+        width: 800px;
+    }
+    
+    
+}
+
+
 .banar{
     display: inline-flex;
     gap: 100px;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     padding: 20px;
 }
@@ -102,29 +168,28 @@ nav .icon i:hover{
     margin: 25px 0 30px 0;
 }
 .text_part a{
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        font-weight:600;
-        color: #ffff;
-        padding: 10px 24px;
-        border-radius: 41px;
-        background-color: #E02C6D;
-        
-
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight:600;
+    color: #ffff;
+    padding: 10px 24px;
+    border-radius: 41px;
+    background-color: #E02C6D;
+    
+    
 }
 .text_part a:hover{
     color: #E02C6D;
-
+    
 }
 
 .text_part i{
-     padding-left: 15px;
+    padding-left: 15px;
 }
 
 .image_part{
     background-image: url(../images/Circle\ design.svg);
     background-size: cover;
- 
 }
 
 .image_part img{
@@ -132,29 +197,93 @@ nav .icon i:hover{
 }
 
 /*============================================
-                Banar part end
+Banar part end
 ==============================================*/
 
 /*============================================
-                logo part Start
+logo part Start
 ==============================================*/
-#logo_part {
-    margin: 100px 0;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 766px) {
+    #logo_part .logo_part{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+        align-content: center;
+        justify-items: center;
+    }
+
+    hr {
+        position: absolute;
+        visibility: hidden;
+    }
 }
-#logo_part .logo_part{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 767px) {
+    #logo_part .logo_part{
+        display: grid;
+    }
+
+    hr {
+        position: absolute;
+        visibility: hidden;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #logo_part {
+        margin: 100px 0;
+    }
+    #logo_part .logo_part{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+    }
+    
 }
 
 /*============================================
-                logo part end
+logo part end
 ==============================================*/
 
 /*============================================
-                Product part Start
+Product part Start
 ==============================================*/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 766px) {
+    #product .product_item {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 30px;
+    justify-items: center;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 767px) {
+    #product .product_item{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #product .product_item{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+    
+}
 #product h2{
     font-family: 'Poppins', sans-serif;
     font-size: 28px;
@@ -162,12 +291,6 @@ nav .icon i:hover{
     margin: 50px 0;
     text-align: center;
     color: #18191F;
-}
-#product .product_item{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 30px;
 }
 #product .product{
     padding: 20px;
@@ -236,15 +359,31 @@ nav .icon i:hover{
 /*============================================
         testimonial part start
 ==============================================*/
-#testimonial-part .testimonial_r{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
+@media only screen and (max-width: 766px) {
+    #testimonial-part .testimonial_r{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    #testimonial-part .testimonial_r{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+    
+}
+
 #testimonial-part{
     background: #f5f5f5;
     padding: 60px 0;
     margin-top: 100px;
+    margin-top: 0 auto !important;
 }
 
 #testimonial-part .title{
@@ -259,18 +398,6 @@ nav .icon i:hover{
     background: #e9e9e9;
 }
 
-#testimonial-part .testimonial .testimonial_img{
-
-
-}
-
-#testimonial-part .testimonial .testimonial_img img{
-    display: block;
-}
-
-#testimonial-part .testimonial .testimonial_text{
-
-}
 
 #testimonial-part .testimonial .testimonial_text p{
     font-family: 'Open Sans', sans-serif;
@@ -302,21 +429,18 @@ nav .icon i:hover{
                 Footer part end
 ==============================================*/
 
-.container3 {
-    width: 262px;
+.footer_part {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 50px 0;
+    text-align: center;
+
 }
 footer{
     width: 100%;
     background-color: #0a0826;
-    display: table;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
 footer h2{
